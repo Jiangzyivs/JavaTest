@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="parameter">
+    <test name = "param">
+        <classes>
+            <parameter name="name" value="jzy"/>
+            <parameter name="age" value="27"/>
+            <parameter name = "ddd" value="11"/>
+            <class name="com.javatest.testng.paramter.ParamterTest"/>
+        </classes>
+    </test>
+
+
+</suite>
+
