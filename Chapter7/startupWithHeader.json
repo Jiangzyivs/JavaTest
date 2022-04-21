@@ -1,0 +1,37 @@
+[
+  {
+    "description": "这是一个会返回cookie信息的get请求",
+    "request": {
+      "uri": "/getCookies",
+      "method": "get"
+    },
+    "response": {
+      "cookies": {
+        "login": "true",
+        "status": "10000"
+      },
+      "text": "获取cookie成功"
+    }
+  },
+
+  {
+    "description": "这是一个带header的请求",
+    "request": {
+      "uri": "/post/with/headers",
+      "method":"post",
+      "headers": {
+        "content-type": "applicathion/json"
+      },
+      "json": {
+        "name": "huhansan",
+        "age": "29"
+      }
+    },
+    "response": {
+      "json": {
+        "name": "gouzei",
+        "age": "27"
+      }
+    }
+  }
+]

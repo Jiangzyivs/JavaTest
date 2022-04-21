@@ -1,0 +1,26 @@
+[
+  {
+    "description": "POST请求",
+    "request": {
+      "uri": "/postdemo",
+      "method": "post"
+    },
+    "response": {
+      "text": "POST请求"
+    }
+  },
+  {
+    "description": "POST请求",
+    "request": {
+      "uri": "/postWithparam",
+      "method": "post",
+      "forms": {
+        "name" : "huhansan",
+        "age" : "27"
+      }
+    },
+    "response": {
+      "text": "带参post请求"
+    }
+  }
+]

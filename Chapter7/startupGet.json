@@ -1,0 +1,26 @@
+[
+  {
+    "description": "无参get请求",
+    "request": {
+      "uri": "/demo",
+      "method": "get"
+    },
+    "response": {
+      "text": "这是无参get响应"
+    }
+  },
+  {
+    "description": "模拟带参get请求",
+    "request": {
+      "uri": "/getDemo",
+      "method": "get",
+      "queries": {
+        "name": "jzy",
+        "age": "27"
+      }
+    },
+    "response": {
+      "text": "name + age"
+    }
+  }
+]

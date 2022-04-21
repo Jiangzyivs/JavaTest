@@ -1,0 +1,25 @@
+[
+  {
+    "description": "这是重定向请求",
+    "request": {
+      "uri": "/rediredct"
+    },
+    "redirectTo": "http://www.baidu.com"
+  },
+  {
+    "description": "重定向到自己的网页",
+    "request": {
+      "uri": "/redirect/topath"
+    },
+    "redirectTo":"/redirect/toUrl"
+  },
+  {
+    "description": "这是被重定向的请求地址",
+    "request":{
+      "uri": "/redirect/toUrl"
+    },
+    "response": {
+      "text": "重定向成功了"
+    }
+  }
+]
