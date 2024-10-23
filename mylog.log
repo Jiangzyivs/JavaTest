@@ -1,0 +1,28 @@
+2024-10-08 20:07:21.100  WARN 29917 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2024-10-08 20:07:26.129  INFO 29917 --- [main] com.course.Application                   : Starting Application on jzydeMacBook-Pro.local with PID 29917 (/Users/jzy/TestNg/JavaTest/SpringBootTest/target/classes started by jzy in /Users/jzy/TestNg/JavaTest)
+2024-10-08 20:07:26.137  INFO 29917 --- [main] com.course.Application                   : No active profile set, falling back to default profiles: default
+2024-10-08 20:07:27.678  INFO 29917 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2024-10-08 20:07:27.691  INFO 29917 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-08 20:07:27.692  INFO 29917 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-10-08 20:07:27.786  INFO 29917 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-08 20:07:27.786  INFO 29917 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1600 ms
+2024-10-08 20:07:27.895  WARN 29917 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'areaController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.course.dao.AreaDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2024-10-08 20:07:27.905  INFO 29917 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-08 20:07:27.928  INFO 29917 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-10-08 20:07:28.051 ERROR 29917 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.course.dao.AreaDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.course.dao.AreaDao' in your configuration.
+

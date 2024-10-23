@@ -7,6 +7,16 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="spring-snapshot" />
+      <option name="name" value="Spring Snapshot" />
+      <option name="url" value="https://repo.spring.io/snapshot" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="rabbit-milestone" />
+      <option name="name" value="Rabbit Milestone" />
+      <option name="url" value="https://dl.bintray.com/rabbitmq/maven-milestones" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="releases" />
       <option name="name" value="releases" />
       <option name="url" value="http://192.168.1.22:8081/repository/maven-releases/" />
@@ -30,6 +40,16 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="xyb2b-public" />
+      <option name="name" value="xyb2b-public" />
+      <option name="url" value="http://nexus.xyb2b.com.cn/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-milestone" />
+      <option name="name" value="Spring Milestone" />
+      <option name="url" value="https://repo.spring.io/milestone" />
     </remote-repository>
   </component>
 </project>

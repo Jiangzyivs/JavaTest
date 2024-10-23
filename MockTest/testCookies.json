@@ -1,0 +1,42 @@
+[
+  {
+    "description": "获取cookie的接口",
+    "request": {
+      "uri": "/getPostCookies",
+      "method": "post",
+      "json": {
+        "name": "jzy",
+        "pawd":"123456"
+      }
+    },
+    "response": {
+      "cookies": {
+        "login": "true"
+      },
+      "json": {
+        "code": "200",
+        "data": "登录成功"
+      }
+    }
+  },
+
+  {
+    "description": "获取cookie的接口",
+    "request": {
+      "uri": "/post/with/cookies",
+      "method": "post",
+      "cookies": {
+        "login": "true"
+      },
+      "json": {
+        "sku": "123"
+      }
+    },
+    "response": {
+      "json": {
+        "code": "200",
+        "data": "获取商品信息"
+      }
+    }
+  }
+]

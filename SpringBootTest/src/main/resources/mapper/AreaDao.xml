@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.course.dao.AreaDao">
+    <resultMap id="BaseResultMap" type="com.course.modle.po.Areapo">
+        <id column="area_id" property="areaId" jdbcType="BIGINT"/>
+        <result column="area_name" property="areaName" jdbcType="VARCHAR"/>
+        <result column="priority" property="priority" jdbcType="TINYINT"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="queryArea" resultMap="BaseResultMap">
+        select area_id,area_name,priority,create_time,modify_time
+        from tb_area
+        order by priority
+                desc
+    </select>
+
+    <select id="queryAreaById" resultType="com.example.demo.entity.Area">
+        select *
+        from tb_area
+        where area_id = #{areaId}
+    </select>
+
+    <insert id="insertArea" useGeneratedKeys="true" keyProperty="areaId" keyColumn="area_Id"
+            parameterType="com.example.demo.entity.Area">
+        INSERT INTO tb_area(area_name, priority, create_time, modify_time)
+        VALUES (#{areaName}, #{priority}, #{createTime}, #{modifyTime})
+    </insert>
+
+    <update id="updateArea" parameterType="com.example.demo.entity.Area">
+        UPDATE tb_area
+        <set>
+            <if test="areaName!=null">
+                area_name=#{areaName},
+            </if>
+            <if test="priority!=null">
+                priority=#{priority},
+            </if>
+            <if test="modifyTime!=null">
+                modify_time=#{modifyTime}
+            </if>
+        </set>
+        WHERE area_id=#{areaId}
+    </update>
+
+    <delete id="deleteArea">
+        DELETE
+        FROM tb_area
+        WHERE area_id = #{areaId}
+    </delete>
+
+
+</mapper>

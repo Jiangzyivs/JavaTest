@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+logging:
+  file:
+    path: logs
+    name: mylog.log
+
+spring:
+  datasource:
+    username: root
+    password: jzy995226
+    url: jdbc:mysql://127.0.0.1:3306/test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.course
+  mapper-locations:
+    - mapper/*

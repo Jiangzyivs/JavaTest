@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+logging:
+  file:
+    path: logs
+    name: mylog.log
+
+spring:
+  application:
+    name: myTest
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    data-username: root
+    data-password: jzy995226
+
+mybatis:
+  type-aliases-package: com.jzy.model
+  mapper-locations:
+    - mapper/*

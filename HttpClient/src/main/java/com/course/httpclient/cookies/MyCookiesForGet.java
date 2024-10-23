@@ -8,9 +8,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.w3c.dom.Entity;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -43,7 +43,7 @@ public class MyCookiesForGet {
         result = EntityUtils.toString(response.getEntity(), "utf-8");
         System.out.println(result);
         this.store = client.getCookieStore();
-        for(Cookie cookie : store.getCookies()){
+        for(Cookie cookie : client.getCookieStore().getCookies()){
             System.out.println(cookie.getName());
             System.out.println(cookie.getValue());
         }
@@ -53,11 +53,20 @@ public class MyCookiesForGet {
     public void testGetWithCookies() throws IOException{
         String uri = bundle.getString("test.get.with.cookies");
         String testUrl = this.url + uri;
+        System.out.println(testUrl);
         HttpGet httpGet = new HttpGet(testUrl);
         DefaultHttpClient client = new DefaultHttpClient();
+        //设置cookie
         client.setCookieStore(this.store);
+        System.out.println(this.store);
         HttpResponse response = client.execute(httpGet);
         System.out.println(response);
+        //获取响应状态码
+        int statusCode = response.getStatusLine().getStatusCode();
+        System.out.println(statusCode);
+        if (200==statusCode){
+            System.out.println(EntityUtils.toString(response.getEntity()));
+        }
     }
 
 }
